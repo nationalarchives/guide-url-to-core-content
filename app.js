@@ -19,8 +19,8 @@ app.get('/', (req, res, next) => {
 });
 
 app.post('/', upload.array(), (req, res, next) => {
-
-    const guides = JSON.parse(req.body.guides),
+    
+    const guides = req.body.guides,
         guides_content = [],
         request_promises = [];
 
