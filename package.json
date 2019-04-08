@@ -1,0 +1,29 @@
+{
+  "name": "guide-url-to-core-content",
+  "version": "1.0.0",
+  "description": "A quick proof of concept that takes a URL and returns 'core' (i.e. specific) HTML content from the page.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com//nationalarchives/guide-url-to-core-content.git"
+  },
+  "engines": {
+    "node": "10.x"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "jsdom": "^14.0.0",
+    "multer": "^1.4.1",
+    "node-fetch": "^2.3.0",
+    "nodemon": "^1.18.10"
+  }
+}
