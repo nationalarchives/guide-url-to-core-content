@@ -14,6 +14,10 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+app.get('/', (req, res, next) => {
+    res.send('This application only responds to POST requests');
+});
+
 app.post('/', upload.array(), (req, res, next) => {
 
     const guides = JSON.parse(req.body.guides),
