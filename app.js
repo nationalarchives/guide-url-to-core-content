@@ -18,9 +18,9 @@ app.get('/', (req, res, next) => {
 
 app.post('/', (req, res, next) => {
 
-    const guides = req.body.guides,
-        guides_content = [],
-        request_promises = [];
+    const guides = req.body.guides;
+    const guides_content = [];
+    const request_promises = [];
 
     Object.keys(guides).forEach(guide => {
 
