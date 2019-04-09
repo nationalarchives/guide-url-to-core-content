@@ -1,9 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const multer = require('multer');
 const cors = require('cors');
 const fetch = require('node-fetch');
-const upload = multer();
 const { just_guide_content } = require('./just_guide_content');
 
 // Create an express application
@@ -18,7 +16,7 @@ app.get('/', (req, res, next) => {
     res.send('This application only responds to POST requests');
 });
 
-app.post('/', upload.array(), (req, res, next) => {
+app.post('/', (req, res, next) => {
 
     const guides = req.body.guides,
         guides_content = [],
