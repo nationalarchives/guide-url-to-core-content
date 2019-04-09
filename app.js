@@ -44,6 +44,7 @@ app.post('/', (req, res, next) => {
         .then(() => {
             res.send(guides_content)
         })
+        .catch(error => console.log(error));
 });
 
 app.listen(process.env.PORT || 3000, function () {
