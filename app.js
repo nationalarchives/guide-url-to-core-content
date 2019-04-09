@@ -42,7 +42,7 @@ app.post('/', (req, res, next) => {
     // When all fetch() promises are fulfilled
     Promise.all(request_promises)
         .then(() => {
-            res.send(guides_content)
+            res.send(guides_content.join(' '))
         })
         .catch(error => console.log(error));
 });
