@@ -7,7 +7,9 @@ const just_guide_content = (html) => {
     const main_content = document.querySelector("div[role='main']").innerHTML;
 
     // Remove extra whitespace before returning
-    return main_content.replace(/\n|(\s+)/g, ' ');
+    return main_content
+        .replace(/\n|(\s+)/g, ' ') // Remove extra whitespace before returning
+        .replace(/\<\!--[^>]*>/g, '') // Remove HTML comments
 };
 
 exports.just_guide_content = just_guide_content;
