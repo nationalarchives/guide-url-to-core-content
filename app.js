@@ -19,14 +19,16 @@ app.get('/', (req, res, next) => {
 });
 
 app.post('/', upload.array(), (req, res, next) => {
-    
+
     const guides = req.body.guides,
         guides_content = [],
         request_promises = [];
 
     Object.keys(guides).forEach(guide => {
 
-        const request_promise = fetch(`http://www.nationalarchives.gov.uk/help-with-your-research/research-guides/${guide}/`)
+        const url = `http://www.nationalarchives.gov.uk/help-with-your-research/research-guides/${guide}/`;
+
+        const request_promise = fetch(url)
             .then(response => {
                 return response.text();
             })
